@@ -1,0 +1,175 @@
+*{
+  font-family: 'Noto Serif';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(233, 233, 233);
+}
+
+
+/* ---------------section override------------------ */
+section{
+  background-color: rgb(233, 233, 233) !important;
+  gap: 1%;
+  display: flex;
+  position: relative;
+}
+
+
+/* ---------------left-cart------------------ */
+.left-cart{
+  width: 74%;
+  background-color: white;
+}
+
+.cart-in4{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid rgb(233, 233, 233);
+}
+
+.cart-in4 h2{
+  font-weight: lighter;
+}
+
+.cart-in4 p{
+  text-decoration: underline;
+}
+
+.cart-in4 h1{
+  color: red;
+}
+
+.product-item{
+  display: flex;
+  height: 90px;
+  border-top: 1px solid rgb(233, 233, 233);
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+.product-item img {
+  width: 6%;
+  display: flex;
+  object-fit: contain;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.product-item h4 {
+  width: 60%;
+}
+
+.product-item .quantity-controls{
+  width: 15%;
+}
+
+.product-item p{
+  width: 15%;
+  text-align: right;
+  color: red;
+  font-weight: bolder;
+}
+
+.quantity-controls {
+  height: 60%;
+  background-color: white;
+  display: flex;
+  border: 1px solid rgb(233, 233, 233);
+}
+
+.product-item button {
+  font-size: large;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.delete-product{
+  width: 4%;
+  margin-top: 5px;
+}
+
+.quantity-controls input {
+  width: 100%;
+  text-align: center;
+  font-size: large;
+  border: none;
+}
+
+
+/* ---------------right-cart------------------ */
+.right-cart{
+  width: 25%;
+  height: fit-content;
+  background-color: white;
+  position: sticky;
+  top: 80px;
+}
+
+.note-container{
+  padding: 30px 10px 20px 10px;
+  border-top: 1px solid rgb(233, 233, 233);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.note-container h4{
+  font-weight: lighter;
+}
+
+.note-container textarea{
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  outline: none;
+}
+
+.code-container, .right-cart-btn-container{
+  margin: 0 10px 20px 10px;
+}
+
+.code-container input{
+  width: 100%;
+  outline: none;
+  height: 40px;
+  padding: 5px;
+}
+
+.right-cart-btn-container button{
+  background-color: red;
+  color: white;
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+}
+
+.return-btn{
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.return-btn a{
+  display: inline-flex;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+}
+
+.return-btn a:hover{
+  color: red;
+}

@@ -1,0 +1,256 @@
+*{
+    font-family: 'Noto Serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(233, 233, 233);
+}
+
+
+/* ------------------------product-img------------------------- */
+.product-img{
+    width: 55%; 
+}
+
+.current-img{
+    width: 400px;
+    height: 400px;
+    margin: 15px auto;
+    overflow: hidden;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-img > img{
+    width: 100%;
+}
+
+.list-img-container{
+    display: flex;
+    margin-right: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.list-img{
+    display: flex;
+    gap: 16px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.list-img > img{
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.active-img{
+    border: 1px solid red;
+}
+
+.list-img-btn {
+    color: black;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+}
+
+.list-img-btn > span{
+    padding: 8px;
+    font-size: large;
+}
+
+.list-img-btn:hover{
+    color: red;
+}
+
+.list-img-next {
+    right: 10px;
+}
+
+.list-img-prev { 
+    left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.product-title{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+.product-title > h1{
+    padding: 0 0 15px 0;
+}
+
+.product-title .price{
+    color: red;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 0 0 20px 0;
+}
+
+.buy-btn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0 20px 0;
+    padding: 5px;
+}
+
+.add-btn{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0 20px 0;
+    padding: 5px;
+}
+
+.promotion{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(220, 220, 220);
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.promotion > h4{
+    padding: 10px 15px;
+    background-color: rgb(233, 233, 233);;
+}
+
+.promotion-line{
+    display: flex;
+    padding: 5px 10px;
+}
+
+.promotion-line > span:first-child{
+    color: green;
+    padding-right: 5px;
+    font-size: 22px;
+}
+
+.promotion-line a {
+    color: rgb(137, 58, 255);
+    text-decoration: none;
+}
+
+
+/* ------------------------product-des-in4------------------------- */
+.description{
+    width: 73%;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.description h2{
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.description > p{
+    text-align: justify;
+}
+
+.fade-out {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  bottom: 60px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+  transition: opacity 0.5s ease;
+}
+
+.content-collapse{
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.more-btn{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: none;
+    color: rgb(137, 58, 255);
+    background-color: white;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.more-btn > span{
+    margin: 3px 0 0 0;
+}
+
+.expanded + .fade-out{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.in4{
+    width: 26%;
+    height: fit-content;
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top: 80px;
+    overflow: hidden;
+}
+
+.in4 h2{
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.in4 .fade-out{
+    height: 250px;
+}
+
+.table-wrapper {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgb(220, 220, 220);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+table {
+    width: auto;
+    table-layout: fixed;    
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(220, 220, 220);
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
