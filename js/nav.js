@@ -62,7 +62,7 @@ function closePopup(){
 }
 
 function renderPopupLeftItem(categories){
-    return categories.map(category => `<div class="popup-item" id="${category.id}">
+    return categories.map(category => `<div class="popup-item" id="${category.id}" onclick="window.location.href='../pages/all-product.html'">
                 <span class="material-symbols-outlined">computer</span>
                 <p>${category.categoryName}</p>
                 <span class="material-symbols-outlined">chevron_right</span>

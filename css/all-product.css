@@ -1,0 +1,13 @@
+.grid-courses{
+    display: grid !important;
+    grid-template-columns: repeat(5, auto);
+}
+
+section{
+    margin-top: 80px !important;
+    background-color: white !important;
+}
+
+.card-item{
+    margin: 5px 0 0 0 !important;
+}
