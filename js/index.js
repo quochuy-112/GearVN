@@ -1,12 +1,14 @@
-// move slide banner
 let slidesBanner = [
-    'assets/banner1.jpg',
-    'assets/banner2.jpg',
-    'assets/banner3.jpg',
-    'assets/banner4.jpg'
+    '../assets/banner1.jpg',
+    '../assets/banner2.jpg',
+    '../assets/banner3.jpg',
+    '../assets/banner4.jpg'
 ];
 
 const carousel = document.getElementById('carousel');
+const bannerNextBtn = document.getElementById('banner-next-btn');
+const bannerPrevBtn = document.getElementById('banner-prev-btn');
+let currentSlide = 0;
 
 slidesBanner.forEach(element => {
     let img = document.createElement('img');
@@ -14,236 +16,25 @@ slidesBanner.forEach(element => {
     carousel.appendChild(img);
 });
 
-let currentSlide = 0;
 function moveSlideBanner(currentSlide, carouselWidth) {
-    document.getElementById('carousel').style.transform = `translateX(-${currentSlide * carouselWidth}px)`;
+    carousel.style.transform = `translateX(-${currentSlide * carouselWidth}px)`;
 }
 
-document.getElementById('banner-next-btn').addEventListener('click', function () {
-    const carouselWidth = document.getElementById('carousel').offsetWidth;
+bannerNextBtn.addEventListener('click', function () {
+    const carouselWidth = carousel.offsetWidth;
     currentSlide = (currentSlide + 1) % slidesBanner.length;
     moveSlideBanner(currentSlide, carouselWidth);
 });
 
-document.getElementById('banner-prev-btn').addEventListener('click', function () {
-    const carouselWidth = document.getElementById('carousel').offsetWidth;
+bannerPrevBtn.addEventListener('click', function () {
+    const carouselWidth = carousel.offsetWidth;
     currentSlide = (currentSlide - 1 + slidesBanner.length) % slidesBanner.length;
     moveSlideBanner(currentSlide, carouselWidth);
 });
 
 
 
-// move to show top product
-let topProduct1 = [
-    {
-        id: "topProduct1-product1",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-1_0ac8558a64af48e8b57f5f739acea9fa_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "19,000,000"
-    },
-    {
-        id: "topProduct1-product2",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-2_9feaf2db9a6f4caf88c45a4b18e7ae54_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    },
-    {
-        id: "topProduct1-product3",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-4_c1005946a2ce49d184f164a7313b54b9_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    },
-    {
-        id: "topProduct1-product4",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/q27g11e_f_aed8857ee655455882a9026355d2f6b2_grande.png",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    },
-    {
-        id: "topProduct1-product5",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-1_0ac8558a64af48e8b57f5f739acea9fa_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    }
-];
 
-let topProduct2 = [
-    {
-        id: "topproduct2-product1",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-1_0ac8558a64af48e8b57f5f739acea9fa_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "19,000,000"
-    },
-    {
-        id: "topproduct2-product2",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-2_9feaf2db9a6f4caf88c45a4b18e7ae54_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    },
-    {
-        id: "topproduct2-product3",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-4_c1005946a2ce49d184f164a7313b54b9_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    },
-    {
-        id: "topproduct2-product4",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/q27g11e_f_aed8857ee655455882a9026355d2f6b2_grande.png",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    },
-    {
-        id: "topproduct2-product5",
-        href: "/pages/product-detail.html",
-        imgSrc: "https://product.hstatic.net/200000722513/product/arvn-man-hinh-viewsonic-vx2758a-2k-pro-3-27-ips-2k-240hz-chuyen-game-1_0ac8558a64af48e8b57f5f739acea9fa_grande.jpg",
-        imgAlt: "Sản phẩm 1",
-        title: "Màn hình ViewSonic VX2758A-2K-PRO-3 27' IPS 2K 240Hz chuyên game",
-        specs: {
-            gpu: "RTX 4090",
-            cpu: "i5 12400H",
-            mainboard: "B760",
-            ram: "16GB",
-            storage: "500GB"
-        },
-        rating: {
-            stars: 4.5,
-            votes: 1044
-        },
-        price: "49,000,000"
-    }
-];
-
-let topProduct = [
-    {
-        currentIndex: 0,
-        id: "topproduct1",
-        name: "FLASH SALE GIÁ TOP",
-        product: topProduct1,
-    },
-    {
-        currentIndex: 0,
-        id: "topproduct2",
-        name: "LAPTOP BÁN CHẠY",
-        product: topProduct2,
-    },
-];
 
 function toSlug(str) {
     return str
@@ -257,9 +48,9 @@ function toSlug(str) {
         .replace(/[^a-z0-9\-]/g, '');      // Xóa ký tự đặc biệt (nếu muốn làm ID an toàn)
 }
 
-const bodyNodes = document.body.children;
-const referenceNode = bodyNodes[1];
-referenceNode.insertAdjacentHTML('afterend', renderSection(topProduct));
+const mainChildren = document.querySelector('main').children;
+const referenceNode = mainChildren[0];
+referenceNode.insertAdjacentHTML('beforebegin', renderSection(topProduct));
 
 topProduct.forEach(element => {
     let idSection = toSlug(element.id);
@@ -326,7 +117,7 @@ topProduct.forEach(element => {
         moveProductShowcase(currentProduct, element.id);
 
         updateNextBtn(currentProduct, element.product.length, nextBtnid);
-        updatePrevBtn(currentProduct, prevBtnId);    
+        updatePrevBtn(currentProduct, prevBtnId);
     })
 
     document.getElementById(nextBtnid).addEventListener('click', function(){
@@ -405,7 +196,7 @@ function openSubcategory(event, subcategories){
 
     for(let [index, subcategory] of subcategories.entries()){
         let btn = document.createElement('button');
-        btn.classList.add("tab-button");
+        btn.classList.add("sub-tab-button");
         btn.textContent = subcategory.name;
         btn.id = subcategory.id;
         btn.onclick = (event) => openProductList(event, subcategories, index);

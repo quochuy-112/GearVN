@@ -129,7 +129,7 @@ let sampleProduct = [
 ];
 
 const bodyNodes2 = document.body.children;
-const referenceNode = bodyNodes2[2];
+const referenceNode = bodyNodes2[3];
 referenceNode.insertAdjacentHTML('afterend', renderSection(sampleProduct));
 
 sampleProduct.forEach(element => {

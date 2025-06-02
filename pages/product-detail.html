@@ -13,9 +13,21 @@
 </head>
 <body>
     <div id="nav-placeholder"></div>
-    
 
-    <section style="background-color: white; display: flex; padding: 10px; margin-top: 80px;">
+    <nav class="breadcrumb" id="breadcrumb">
+        <a href="#">
+            <span style="font-size: x-large;" class="material-symbols-outlined">home</span>
+            Trang chủ
+        </a>
+        <p>/</p>
+        <a href="#">Màn hình</a>
+        <p>/</p>
+        <a href="#">Màn hình gaming</a>
+        <p>/</p>
+        <span>Màn hình Viewsonic VA2732A-H 27" IPS 120Hz viền mỏng</span>
+    </nav>
+
+    <section style="background-color: white; display: flex; padding: 10px;">
         <div class="product-img">
             <div class="current-img">
                 <img id="current-img" src="https://product.hstatic.net/200000722513/product/view_va2732a-h_gearvn_dfdcf24792dc4d0f912dcffcbeee0b16_grande.jpg" alt="">
@@ -81,7 +93,7 @@
     </section>
     
 
-    <section style="background-color: rgb(233, 233, 233); display: flex; gap: 1%; position: relative;">
+    <main style="background-color: rgb(233, 233, 233); display: flex; gap: 1%; position: relative;">
         <div class="description">
             <h2>Thông tin sản phẩm</h2>
             <p id="description" class="content-collapse">
@@ -179,7 +191,7 @@
                 <span class="material-symbols-outlined">arrow_right</span>
             </button>
         </div>
-    </section>
+    </main>
 
 
 
@@ -187,7 +199,6 @@
     
     <script src="../js/include.js"></script>
     <script src="../js/product-detail.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

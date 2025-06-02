@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" />
 </head>
-<body id="body">
+<body>
     <div id="nav-placeholder"></div>
     
 
@@ -21,6 +21,7 @@
         <button id="banner-next-btn" aria-label="next slide" class="banner-btn banner-next">
             <span class="material-symbols-outlined">chevron_right</span>
         </button>
+
         <button id="banner-prev-btn" aria-label="previous slide" class="banner-btn banner-prev">
             <span class="material-symbols-outlined">chevron_left</span>
         </button>
@@ -28,61 +29,24 @@
 
 
 
-    <!-- <section>
-        <h2 class="section-title">FLASH SALE GIÁ TOP</h2>
+    <main>
+        <section>
+            <h2 class="section-title">TẤT CẢ SẢN PHẨM</h2>
+
+            <div class="tab-bar" id="tab-bar"></div>
+
+            <div class="sub-tab-bar" id="sub-tab-bar"></div>
+
+            <div id="all-product"></div>
+        </section>
+    </main>
     
-        <div class="section-showcase">
-            <div class="courses-container">
-                <div class="grid-courses" id="product-list"></div>
-            </div>
-
-            <button class="courses-container-btn courses-prev hidden" id="prev-courses-btn">
-                <span class="material-symbols-outlined">chevron_left</span>
-            </button> 
-
-            <button class="courses-container-btn courses-next" id="next-courses-btn">
-                <span class="material-symbols-outlined">chevron_right</span>
-            </button>
-        </div>
-    
-        <button type="button" class="section-more-btn"><b>Xem tất cả sản phẩm</b></button>
-    </section> -->
-
-
-
-    <section style="background-color: white;">
-        <h2 class="section-title" style="color: black;">TẤT CẢ SẢN PHẨM</h2>
-
-        <div class="tab-bar" id="tab-bar"></div>
-
-        <div class="sub-tab-button" id="sub-tab-bar"></div>
-
-        <div id="all-product">
-            <!-- <div class="section-showcase">
-                <div class="courses-container">
-                    <div class="grid-courses" id="all-product-list"></div>
-                </div>
-    
-                <button class="courses-container-btn courses-prev hidden" id="prev-courses-btn">
-                    <span class="material-symbols-outlined">chevron_left</span>
-                </button> 
-    
-                <button class="courses-container-btn courses-next" id="next-courses-btn">
-                    <span class="material-symbols-outlined">chevron_right</span>
-                </button>
-            </div>
-    
-            <button type="button" class="section-more-btn"><b>Xem tất cả sản phẩm</b></button> -->
-        </div>
-    </section>
-
 
 
     <section class="category-section">
         <h2 class="section-title">DANH MỤC SẢN PHẨM</h2>
 
         <div class="category-container" id="category-container"></div>
-
     </section>
 
 
@@ -90,8 +54,8 @@
     <div id="footer-placeholder"></div>
 
 
-    <script src="js/include.js"></script>
 
+    <script src="js/include.js"></script>
     <script src="js/data.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/index.js"></script>
